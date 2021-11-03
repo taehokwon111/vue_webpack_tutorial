@@ -5,6 +5,15 @@
 </template>
 
 <script>
+const ob = {
+    test1 : "this.?",
+    test2 : "12345",
+    test3 : this,
+    getname : function() {
+        return this;
+    },
+}
+
 export default {
            beforeCreate() {
       console.log("test2_beforeCreate");
@@ -17,6 +26,8 @@ export default {
     },
     mounted() {
       console.log("test2_mounted")
+    console.log(ob.getname());
+
     },
     beforeUpdate(){
       console.log("test2_beforeUpdate");

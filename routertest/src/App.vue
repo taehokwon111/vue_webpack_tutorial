@@ -13,8 +13,20 @@
 <script>
 import router from './routes'
 
+
+
+console.log(` 1 / ${this}`);
+
 export default {
-      router
+      router,
+      created(){
+        
+      },
+      mounted(){
+        console.log(` 2 / ${this}`)
+       
+      }
+
 }
 </script>
 
